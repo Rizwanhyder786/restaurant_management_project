@@ -5,7 +5,8 @@ from .models import *
 # Custom Admins
 class ItemAdmin(admin.ModelAdmin):
     list_display = ['item_name','item_price','created_at']
-
+    search_fields=("item_name",)
+    list-filter =("created_at",)
 
 # Register your models here.
 admin.site.register(Item,ItemAdmin)
