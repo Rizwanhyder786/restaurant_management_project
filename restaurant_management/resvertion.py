@@ -5,3 +5,9 @@
      <p>resverytion system coming soon</p>
     </div>
 {% endblock %}
+from datatime import datatime
+def current_year(request):
+    return{
+        'year':datetime.now().year
+    }
+
