@@ -53,3 +53,8 @@ footer{
     padding:1rem;
     font-size:0,8rem;
 }
+STATIC_URL="/static/"
+import os
+STATICFILES_DIRS=[
+    os.Path.join(BASE_DIR,"myapp/static"),
+]
