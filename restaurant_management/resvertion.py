@@ -58,3 +58,17 @@ import os
 STATICFILES_DIRS=[
     os.Path.join(BASE_DIR,"myapp/static"),
 ]
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.db import DatabaseError
+from .models import Customer
+
+def customer_list(request):
+    try:
+        customers = Customer.objects.all()
+        data = {"customers": list(customers.values("id", "name", "emsil"))}
+        return JsonResponse(data,safe=Flase)
+    except DatabaseError as e:
+        return JsonResponse({"error":"database error occurred.please try again later"},status=500)
+    except Exception as e:
+        return JsonResponse)({"error":"An unexpeted error occurred."},status=500)
