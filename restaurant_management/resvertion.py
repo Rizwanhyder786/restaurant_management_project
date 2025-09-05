@@ -1,3 +1,7 @@
-from django.shotcuts import render
-def resvertions(request):
-    return render(request,"reservation.html")
+{% extends "base.html" %}  {# remove this line if you don't have a base,html yet}
+{ % block content %}
+    <div style="display:flex;" justfiy-content:center; algin-items:center; 
+     <h1>resverytion</h1>
+     <p>resverytion system coming soon</p>
+    </div>
+{% endblock %}
