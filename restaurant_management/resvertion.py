@@ -110,3 +110,12 @@ def customer_list(request):
  <p>&copy;{{year}} your restaurant name</p>
  <p>opening hours:mon-fri:11am-9pm,sat-sun:10am-10pm</p>
  </footer>
+
+ # yourapp/views.py
+ from django.shortcuts import render
+ from .froms import searchfrom
+
+ def homepage(request):
+    from =sreachfrom(request.GET or None)
+    #no search logic yet,
+    return render(request,"homepage.html",{"from":from})
