@@ -72,3 +72,35 @@ def customer_list(request):
         return JsonResponse({"error":"database error occurred.please try again later"},status=500)
     except Exception as e:
         return JsonResponse)({"error":"An unexpeted error occurred."},status=500)
+<!DOCTYPE html>
+<head>
+ <meta charset="UTF-8">
+ <tittle>Contact From</tittle>
+ </head>
+ <body>
+ <h2>Contact From</h2>
+ <from id ="contact from">
+ <label for ="name">Name:</label>
+ <input type="text" id="email" name="name"><br>
+ <label for="email" > Email:</label><br>
+ <input type="submit">Submit</button>
+ </from>
+ <p> id="errorMessage" style="color:red"></p>
+ <scrpit>
+ document.getElementByld("contactfrom").addeventlistner("submit",function(event){
+    const name=
+ document.getElementByld("name").value.trim();
+    const email=
+ document.getElementByld("email").value.trim();
+    const errorMessage=
+ document.getElementByld("errorMessage");
+    if (name===""|| email===""){
+        errorMessage.textcontent = "please fill in both name and email fields";
+        event.preventDefault();
+        } else{
+            errorMessage.textcontent="";
+        }
+ });
+ </scrpit>
+ </body>
+ </html>
