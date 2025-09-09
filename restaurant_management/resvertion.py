@@ -127,3 +127,9 @@ def customer_list(request):
 
         def __str__(self):
             return f"feedback {self.id} - {self.created_at.strftime(%Y-%d%H.%M)}"
+            ---------------------------------------------------------------------
+            import datatime
+            def current_year(request):
+                return{
+                    'year':datatime.datatime.now().year
+                }
