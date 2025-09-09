@@ -104,3 +104,9 @@ def customer_list(request):
  </scrpit>
  </body>
  </html>
+
+ <footer style="text-algin:center;margin-top:20px;
+ padding:10px;background:blue;">
+ <p>&copy;{{year}} your restaurant name</p>
+ <p>opening hours:mon-fri:11am-9pm,sat-sun:10am-10pm</p>
+ </footer>
