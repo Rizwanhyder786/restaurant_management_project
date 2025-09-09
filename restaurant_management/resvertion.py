@@ -119,3 +119,11 @@ def customer_list(request):
     from =sreachfrom(request.GET or None)
     #no search logic yet,
     return render(request,"homepage.html",{"from":from})
+    ------------------------------------------------------
+    from django.db import models
+    class feedback(models.model):
+        comment = models.textfeild()
+        created_at = models.datatimefeild(auto_now_add=True)
+
+        def __str__(self):
+            return f"feedback {self.id} - {self.created_at.strftime(%Y-%d%H.%M)}"
