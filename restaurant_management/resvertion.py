@@ -133,3 +133,20 @@ def customer_list(request):
                 return{
                     'year':datatime.datatime.now().year
                 }
+-----------------------------------------------------------
+from rest_framework.decorators import api_view
+from rest_framework.response import response
+def get_menu(request):
+    menu=[
+        {
+            "name":"marghetita pizza",
+            "description":"classic pizza with tomato] sauce"
+            "price":899
+        },
+        {
+            "name":"casear salad",
+            "descripiton":"romaine lettuce,croutons,parmesan,and casear dressing",
+            "price":7.25
+        }
+    ]
+    return response(menu)
